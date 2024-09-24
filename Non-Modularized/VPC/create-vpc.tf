@@ -11,7 +11,7 @@ variable "secret_key" {
 # Providing the provider with the region and some other credentials
 
 provider "aws" {
-  region     = "us-east-1"
+  region     = "ap-south-1"
   access_key = var.access_key
   secret_key = var.secret_key
 }
@@ -44,7 +44,7 @@ resource "aws_internet_gateway" "gateway" {
 resource "aws_subnet" "public-subnet-1" {
   vpc_id                  = aws_vpc.vpc.id
   cidr_block              = var.public-subnet-1a
-  availability_zone       = "us-east-1a"
+  availability_zone       = "ap-south-1a"
   map_public_ip_on_launch = true
 
   tags = {
@@ -58,7 +58,7 @@ resource "aws_subnet" "public-subnet-1" {
 resource "aws_subnet" "public-subnet-2" {
   vpc_id                  = aws_vpc.vpc.id
   cidr_block              = var.public-subnet-2a
-  availability_zone       = "us-east-1b"
+  availability_zone       = "ap-south-1b"
   map_public_ip_on_launch = true
 
   tags = {
@@ -100,7 +100,7 @@ resource "aws_route_table_association" "route-table-association2" {
 resource "aws_subnet" "private-subnet-1" {
   vpc_id                  = aws_vpc.vpc.id
   cidr_block              = var.private-subnet-1a
-  availability_zone       = "us-east-1a"
+  availability_zone       = "ap-south-1a"
   map_public_ip_on_launch = false
 
   tags = {
@@ -115,7 +115,7 @@ resource "aws_subnet" "private-subnet-1" {
 resource "aws_subnet" "private-subnet-2" {
   vpc_id                  = aws_vpc.vpc.id
   cidr_block              = var.private-subnet-2a
-  availability_zone       = "us-east-1b"
+  availability_zone       = "ap-south-1b"
   map_public_ip_on_launch = false
 
   tags = {
@@ -131,7 +131,7 @@ resource "aws_subnet" "private-subnet-2" {
 resource "aws_subnet" "private-subnet-3" {
   vpc_id                  = aws_vpc.vpc.id
   cidr_block              = var.private-subnet-3a
-  availability_zone       = "us-east-1a"
+  availability_zone       = "ap-south-1a"
   map_public_ip_on_launch = false
 
   tags = {
@@ -147,7 +147,7 @@ resource "aws_subnet" "private-subnet-3" {
 resource "aws_subnet" "private-subnet-4" {
   vpc_id                  = aws_vpc.vpc.id
   cidr_block              = var.private-subnet-4a
-  availability_zone       = "us-east-1b"
+  availability_zone       = "ap-south-1b"
   map_public_ip_on_launch = false
 
   tags = {
